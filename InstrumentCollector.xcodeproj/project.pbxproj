@@ -13,6 +13,8 @@
 		C9E846201E74575C0036D3F6 /* InstrumentCollector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9E8461E1E74575C0036D3F6 /* InstrumentCollector.xcdatamodeld */; };
 		C9E846221E74575C0036D3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E846211E74575C0036D3F6 /* Assets.xcassets */; };
 		C9E846251E74575C0036D3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E846231E74575C0036D3F6 /* LaunchScreen.storyboard */; };
+		C9E8462D1E745D8A0036D3F6 /* ibanezSA420.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E8462C1E745D8A0036D3F6 /* ibanezSA420.jpg */; };
+		C9E8462F1E745EA20036D3F6 /* InstrumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8462E1E745EA20036D3F6 /* InstrumentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C9E846211E74575C0036D3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9E846241E74575C0036D3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9E846261E74575C0036D3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E8462C1E745D8A0036D3F6 /* ibanezSA420.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ibanezSA420.jpg; sourceTree = "<group>"; };
+		C9E8462E1E745EA20036D3F6 /* InstrumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		C9E846161E74575C0036D3F6 /* InstrumentCollector */ = {
 			isa = PBXGroup;
 			children = (
+				C9E8462C1E745D8A0036D3F6 /* ibanezSA420.jpg */,
 				C9E846171E74575C0036D3F6 /* AppDelegate.swift */,
 				C9E846191E74575C0036D3F6 /* ViewController.swift */,
+				C9E8462E1E745EA20036D3F6 /* InstrumentViewController.swift */,
 				C9E8461B1E74575C0036D3F6 /* Main.storyboard */,
 				C9E846211E74575C0036D3F6 /* Assets.xcassets */,
 				C9E846231E74575C0036D3F6 /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E846251E74575C0036D3F6 /* LaunchScreen.storyboard in Resources */,
+				C9E8462D1E745D8A0036D3F6 /* ibanezSA420.jpg in Resources */,
 				C9E846221E74575C0036D3F6 /* Assets.xcassets in Resources */,
 				C9E8461D1E74575C0036D3F6 /* Main.storyboard in Resources */,
 			);
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E8461A1E74575C0036D3F6 /* ViewController.swift in Sources */,
+				C9E8462F1E745EA20036D3F6 /* InstrumentViewController.swift in Sources */,
 				C9E846181E74575C0036D3F6 /* AppDelegate.swift in Sources */,
 				C9E846201E74575C0036D3F6 /* InstrumentCollector.xcdatamodeld in Sources */,
 			);

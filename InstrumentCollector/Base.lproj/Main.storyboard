@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SVK-Vr-Yeh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstrumentCollector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +23,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aNZ-hL-ggx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kdb-7y-9ld">
+                            <connections>
+                                <segue destination="2ns-yU-BkE" kind="show" id="b9e-uh-KYc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Instrument View Controller-->
+        <scene sceneID="Ja1-Ry-uiV">
+            <objects>
+                <viewController id="2ns-yU-BkE" customClass="InstrumentViewController" customModule="InstrumentCollector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J0V-Sa-YNn"/>
+                        <viewControllerLayoutGuide type="bottom" id="xgB-gd-ZRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZM7-rl-xXe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ibanezSA420.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3g1-rr-INk">
+                                <rect key="frame" x="47" y="84" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Vxo-dn-bLd"/>
+                                    <constraint firstAttribute="height" constant="150" id="aiS-Io-HeL"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instrument Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-Q8-cHi">
+                                <rect key="frame" x="47.5" y="284" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkv-rW-9uC">
+                                <rect key="frame" x="172" y="334" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="2ns-yU-BkE" eventType="touchUpInside" id="QuN-iQ-e1Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xrz-Q8-cHi" firstAttribute="centerX" secondItem="ZM7-rl-xXe" secondAttribute="centerX" id="0zz-Ja-SbO"/>
+                            <constraint firstItem="3g1-rr-INk" firstAttribute="centerX" secondItem="ZM7-rl-xXe" secondAttribute="centerX" id="7sm-tW-jX8"/>
+                            <constraint firstItem="Gkv-rW-9uC" firstAttribute="centerX" secondItem="ZM7-rl-xXe" secondAttribute="centerX" id="Rtq-qg-c8n"/>
+                            <constraint firstItem="3g1-rr-INk" firstAttribute="top" secondItem="J0V-Sa-YNn" secondAttribute="bottom" constant="20" id="e7P-Nz-PAs"/>
+                            <constraint firstItem="Xrz-Q8-cHi" firstAttribute="width" secondItem="3g1-rr-INk" secondAttribute="width" id="eke-RX-8Ke"/>
+                            <constraint firstItem="Gkv-rW-9uC" firstAttribute="top" secondItem="Xrz-Q8-cHi" secondAttribute="bottom" constant="20" id="gyC-YZ-H01"/>
+                            <constraint firstItem="Xrz-Q8-cHi" firstAttribute="top" secondItem="3g1-rr-INk" secondAttribute="bottom" constant="50" id="xcN-wZ-hNT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EqO-Sq-IhW">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="Du8-Pe-R1C">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="2ns-yU-BkE" id="zCo-A5-m1U"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="TK7-rc-P2P">
+                                <connections>
+                                    <action selector="photosTapped:" destination="2ns-yU-BkE" id="cPQ-TC-C0M"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="instrumentImageView" destination="3g1-rr-INk" id="YCR-lR-yJ2"/>
+                        <outlet property="titleTextField" destination="Xrz-Q8-cHi" id="sv8-yc-7gr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3g-Gc-Oc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T0q-cZ-Kwc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVK-Vr-Yeh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qj9-M4-GZt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t7x-Ic-1Kr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfy-SY-IOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="-545.57721139430294"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ibanezSA420.jpg" width="600" height="192"/>
+    </resources>
 </document>
