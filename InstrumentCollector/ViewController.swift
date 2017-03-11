@@ -8,18 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var instrumentslist : [Instruments] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            try instrumentslist = context.fetch(Instruments.fetchRequest())
+            print(instrumentslist)
+            tableView.reloadData()
+        } catch {
+            print("OOPS WE HAVE AN ERROR")
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return instrumentslist.count
     }
-
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let instrument = instrumentslist[indexPath.row]
+        cell.textLabel?.text = instrument.title
+        cell.imageView?.image = UIImage(data: instrument.image as! Data)
+        return cell
+    }
+    
+    
 }
 

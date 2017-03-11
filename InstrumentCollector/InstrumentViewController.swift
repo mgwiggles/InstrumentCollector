@@ -40,5 +40,17 @@ class InstrumentViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let instrument = Instruments(context: context)
+        
+        instrument.title = titleTextField.text
+        instrument.image = UIImagePNGRepresentation(instrumentImageView.image!) as NSData?
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+        
     }
 }
