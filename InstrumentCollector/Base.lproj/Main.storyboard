@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="aNZ-hL-ggx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kdb-7y-9ld">
                             <connections>
-                                <segue destination="2ns-yU-BkE" kind="show" id="b9e-uh-KYc"/>
+                                <segue destination="2ns-yU-BkE" kind="show" identifier="instrumentSegue" id="b9e-uh-KYc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,6 +83,14 @@
                                     <action selector="addTapped:" destination="2ns-yU-BkE" eventType="touchUpInside" id="QuN-iQ-e1Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJA-Yb-SlG">
+                                <rect key="frame" x="165" y="404" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="2ns-yU-BkE" eventType="touchUpInside" id="8J9-yc-Mbz"/>
+                                    <action selector="deleteTapped:" destination="2ns-yU-BkE" eventType="touchUpInside" id="bAo-fh-uHw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -92,6 +100,8 @@
                             <constraint firstItem="3g1-rr-INk" firstAttribute="top" secondItem="J0V-Sa-YNn" secondAttribute="bottom" constant="20" id="e7P-Nz-PAs"/>
                             <constraint firstItem="Xrz-Q8-cHi" firstAttribute="width" secondItem="3g1-rr-INk" secondAttribute="width" id="eke-RX-8Ke"/>
                             <constraint firstItem="Gkv-rW-9uC" firstAttribute="top" secondItem="Xrz-Q8-cHi" secondAttribute="bottom" constant="20" id="gyC-YZ-H01"/>
+                            <constraint firstItem="zJA-Yb-SlG" firstAttribute="centerX" secondItem="ZM7-rl-xXe" secondAttribute="centerX" id="jWA-3Q-dxj"/>
+                            <constraint firstItem="zJA-Yb-SlG" firstAttribute="top" secondItem="Gkv-rW-9uC" secondAttribute="bottom" constant="40" id="xOG-rL-6lX"/>
                             <constraint firstItem="Xrz-Q8-cHi" firstAttribute="top" secondItem="3g1-rr-INk" secondAttribute="bottom" constant="50" id="xcN-wZ-hNT"/>
                         </constraints>
                     </view>
@@ -110,13 +120,15 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="Gkv-rW-9uC" id="h6h-kV-RRt"/>
+                        <outlet property="deleteButton" destination="zJA-Yb-SlG" id="kwb-oT-cZN"/>
                         <outlet property="instrumentImageView" destination="3g1-rr-INk" id="YCR-lR-yJ2"/>
                         <outlet property="titleTextField" destination="Xrz-Q8-cHi" id="sv8-yc-7gr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3g-Gc-Oc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="137"/>
+            <point key="canvasLocation" x="1776.8" y="136.28185907046478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T0q-cZ-Kwc">
